@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>该二维码支持中文和LOGO</title>
+	<style>
+		input[type="text"], input[type="password"]{font-size: 14px;line-height: normal;line-height: 40px\9;padding: 0 15px;height: 40px;border: 1px solid #bfbfbf;width: 278px;color: #666;background-color: #fff;;font-family:"Microsoft Yahei";}
+		input[type="text"]:focus,input[type="password"]:focus {border: solid 1px #fa6000;}
+		input[type="text"]:disabled,input[type="password"]:disabled{ background-color: #e2e2e2;}
+		input[type="text"].Validform_error, input[type="password"].Validform_error,textarea.Validform_error{ border: solid 1px #fa6000;}
+		.btn{display:block;width:100%;height:40px;border:0;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background-clip:padding-box;box-shadow:none;color:#fff;text-align:center;font-size:16px;line-height:40px;cursor:pointer;-moz-background-clip:padding;-webkit-background-clip:padding-box; transition: all .1s ease-out 0s;-ms-transition: all .1s ease-out 0s;-moz-transition: all .1s ease-out 0s;-webkit-transition: all .1s ease-out 0s;}
+		.btn-orange{background-color:#fa6900;}
+		.btn-orange:hover,.btn-gradual:hover{color:#fff;background-color:#e05701;}
+		.btn-blue{background-color:#59acff;}
+		.btn-blue:hover{color:#fff;background-color:#3594f3;}
+		.btn-graye,.btn-graye:hover{ color: #999; background-color:#eee; cursor: default;}
+		.btn-orange-simple{height: 38px;line-height:38px;background:none;border:solid 1px #fa6000;color: #fa6000;}
+		.btn-orange-simple:hover{background-color:#fa6000;color: #fff;}
+		.btn-disabled,a[disabled="disabled"],button[disabled="disabled"]{ background-color: #ddd; cursor: not-allowed;}
+		.btn-disabled:hover,a[disabled="disabled"]:hover,button[disabled="disabled"]:hover{background-color: #ddd;}
+		.btn-small{width:58px;height:24px;line-height:24px;font-size:12px;}
+		.btn-opacity{outline:0 none; cursor:default!important; opacity:.5; filer:alpha(opacity=50); pointer-events:none;}
+		.btn-gradual{ height: 46px; line-height: 46px; background: #ff6600; background: -webkit-linear-gradient(to bottom,#ff7b19,#fa6900); background: -moz-linear-gradient(to bottom,#ff7b19,#fa6900);background: -o-linear-gradient(to bottom,#ff7b19,#fa6900); background: -webkit-gradient(linear,100% 0,0 0,from(#ff7b19),to(#fa6900));background: linear-gradient(to bottom,#ff7b19,#fa6900);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7b19', endColorstr='#fa6900', GradientType=0 );}
+		button{font-family:'Microsoft Yahei';}
+		.refere-link{ margin-bottom: 30px;}
+		.refere-link .fir-info{ margin-bottom: 16px; font-size: 14px;}
+		.refere-link .fir-label{ margin-bottom: 15px; padding-left: 15px;}
+		.refere-link .fir-label input{ width: 500px; height: 50px; line-height: 50px; color: #000; border-color: #eaeaea; background: none;float: left;}
+		.refere-link .fir-label .btn{ width: 120px; height: 52px; line-height: 52px; margin-left: 20px;text-decoration: none;float: left;}
+	</style>
+</head>
+<body>
+	<div class="refere-link">
+		<p class="fir-info">1.  将您的推广链接人专属链接发给您的好友</p>
+		<div class="fir-label clearfix">
+			<input type="text" class="fl" readonly="readonly" id="registerAddress" value="link" disabled="disabled">
+			<a href="javascript:;" class="btn btn-orange fl" id="copyLink" data-clipboard-text="link">复制链接</a>
+		</div>
+	</div>
+    <script type="text/javascript" src="../common/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/clipboard.min.js"></script>
+	<script type="text/javascript">
+			var copy = new Clipboard('#copyLink');
+            copy.on('success', function (e) {
+            	alert('已成功复制到剪贴板:'+e.text);
+            });
+            copy.on('error', function (e) {
+            	alert('复制失败');
+            });
+	</script>
+</body>
+</html>
